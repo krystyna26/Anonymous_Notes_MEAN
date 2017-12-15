@@ -1,0 +1,14 @@
+<form (submit)="addNote()">
+  Note:
+    <input 
+    type="text" 
+    name="note" 
+    required 
+    minlength="3" 
+    [(ngModel)]="note.message" 
+    #err='ngModel'>
+  Errors: {{ err.errors | json }}
+  Valid: {{ err.valid | json }}
+  
+  <input type="submit" value="Add Note" >
+</form>
